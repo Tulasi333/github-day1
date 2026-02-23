@@ -13,6 +13,13 @@
     steps:
     - name: Deploy the app
       run: echo " Deploying the application to ${{ inputs.environment }}"
+
+   build:
+    needs: input-demo
+    runs-on: ubuntu-latest
+    steps:
+        - name: Build the app
+          run: echo"Build the app"
     
      
      
